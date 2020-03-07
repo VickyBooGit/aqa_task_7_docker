@@ -3,12 +3,12 @@ services:
   postgres:
     image: postgres:12.0-alpine
     ports:
-      - '3306:3306'
+      - '5432:5432'
     volumes:
       - ./data:/var/lib/postgresql
     environment:
       - POSTRGRES_RANDOM_ROOT_PASSWORD=yes
-      - POSTRGRES_DATABASE=app
-      - POSTRGRES_USER=app
-      - POSTRGRES_PASSWORD=PassworD
+      - POSTGRES_DB=app
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=PassworD
 
