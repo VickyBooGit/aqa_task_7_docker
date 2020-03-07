@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  postgres:
+    image: postgres:12.0-alpine
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./data:/var/lib/postgresql
+    environment:
+      - POSTRGRES_RANDOM_ROOT_PASSWORD=yes
+      - POSTRGRES_DATABASE=app
+      - POSTRGRES_USER=app
+      - POSTRGRES_PASSWORD=PassworD
+
